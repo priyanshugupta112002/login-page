@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>login page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="loginPage.css" />
+  </head>
+
+  <body>
+    {{>navbar}}
+
+    <div class="background"></div>
+
+    <div class="container">
+      <div class="content">
+        <h2 class="logo"><i class="fas fa-vest-patches"></i>Shop Abbhi</h2>
+
+
+        <div class="text-box">
+          <h2>
+            Welcome! <br />
+            <span>To Our New Website</span>
+          </h2>
+
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Cupiditate, accusamus! Eos officiis maiores enim inventore similique
+            corporis blanditiis, nesciunt laboriosam?
+          </p>
+
+          <div class="social-icon">
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="login-box" class="log-box">
+        <div class="form-box login">
+
+            <form action="#">
+                <h2>Sign In</h2>
+                
+                <div class="input-box">
+                    <span class="icon"><i class="far fa-envelope-open"></i></span>
+                    <input id="email" type="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="fas fa-lock"></i></span>
+                    <input id="password" type="password" required>
+                    <label for="password">Password</label>
+                </div>
+
+                <div class="rember-forget">
+                    <label><input type="checkbox"> Remember me</label>
+                    <a href="#">Forgot password</a>
+                </div>
+
+                <button type="submit" class="btn">Sign In</button>
+
+                <div class="login-register">
+                    <p>Don't have an Account? <a href="#" id="register-link">Sign up</a></p>
+                </div>
+            </form>    
+        </div>
+
+        <div class="form-box register">
+
+            <form action="/login" method="POST">
+                <h2>Sign Up</h2>
+                
+                <div class="input-box">
+                    <span class="icon"><i class="fas fa-user"></i></span>
+                    <input id="name" type="text" name="firstName" required>
+                    <label for="name">Name</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="far fa-envelope-open"></i></span>
+                    <input id="email-signIn" name="email" type="email" required>
+                    <label for="email-signIn">Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="fas fa-lock"></i></span>
+                    <input id="password-signIn" name="password" type="password" required>
+                    <label for="password-signIn">Password</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><i class="fas fa-lock"></i></span>
+                    <input id="confirmPassword-signIn" name="confirmPassword" type="password" required>
+                    <label for="confirmPassword-signIn">Confirm Password</label>
+                </div>
+
+                <div class="rember-forget">
+                    <label><input type="checkbox"> I agree to the terms & condition</label>
+                </div>
+
+                <button type="submit" class="btn">Sign Up</button>
+
+                <div class="login-register">
+                    <p>Already have an account? <a href="#" id="login-Link">Sign In</a></p>
+                </div>
+            </form>
+            
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <script src="loginPage.js"></script>
+  </body>
+</html>

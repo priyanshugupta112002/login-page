@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&family=Roboto+Condensed:ital,wght@1,300&family=Roboto+Slab:wght@300&display=swap');
+/* font-family: 'League Spartan', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Roboto Slab', serif; */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Roboto Slab', serif';
+}
+body{
+    background: #020410;
+}
+.header{
+    position: fixed;
+    /* background: yellowgreen; */
+    background: transparent;
+    width: 100%;
+    padding: 25px 12.5%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a{
+    text-decoration: none;
+    position: relative;
+    padding: 10px;
+    color: #e4e4e4;
+    font-weight: 500;
+    font-size: 16px;
+    margin-right: 30px;
+}
+.navbar a::after{
+    content:'';
+    background: #e4e4e4;
+    width: 100%;
+    height: 2px;
+    border-radius: 5px;
+    left: 0;
+    bottom: 5px;
+    position: absolute;
+    transform: translateY(8px);
+    opacity: 1;
+    transition: .5s;
+
+}
+.navbar a:hover::after{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.search-box{
+    width: 250px;
+    height: 45px;
+    /* background: transparent; */
+    border: 2px solid #e4e4e4;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+.search-box input{
+    width: 100%;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    color: #e4e4e4;
+    outline: none;
+}
+.search-box input::placeholder{
+    color: #e4e4e4;
+    text-align: center;
+}
+.search-box button{
+    background: transparent;
+    height: 100%;
+    outline: none;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+}
+
+.search-box button i{
+    font-family: 22px;
+    color: #e4e4e4;
+}
+
+.background{
+    width: 100%;
+    height: 100vh;
+    /* background: url(../images/background.png) no-repeat; */
+    /* background: url(../../images/background.png) no-repeat; */
+    background-image: url(images/background.png);
+    background-size: cover;
+    background-position: center;
+    filter: blur(10px);
+    background-repeat: no-repeat;
+}
+
+.container{
+    display: flex;
+    position:absolute;
+    background-image: url(images/background.png) ;
+    background-repeat: no-repeat;
+    top: 55%;
+    left: 50%;
+    width: 75%;
+    border-radius: 1;
+    transform: translate(-50%,-50%);
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+.container .content{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 58%;
+    height: 100%;
+    padding: 80px;
+    color: #e4e4e4;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background: transparent;
+}
+.container .log-box{
+    position: absolute;
+    right: 0;
+    overflow: hidden;
+    top: 0;
+    width: calc(100% - 58%);
+    height: 100%;
+}
+.content .text-box h2{
+    line-height: 1;
+    font-size: 40px;
+}
+.content .text-box h2 span{
+    font-size: 25px;
+}
+.content .text-box p{
+    font-size: 16px;
+    margin: 20px 0;
+}
+.content .logo{
+    font-size: 30px;
+
+}
+.social-icon a i{
+    font-size: 22px;
+    color: #e4e4e4;
+    margin-right: 10px;
+    transition: .5s ease;
+}
+.social-icon a i:hover{
+    transform: scale(1.2);
+}
+
+
+.log-box .form-box{
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: #e4e4e4;
+    width: 100%;
+    height: 100%;
+}
+.log-box .form-box.login{
+    transform: translateX(0);
+    transition: transform .5s ease;
+    transition-delay: .5s;
+}
+.log-box.active .form-box.login{
+    transform: translateX(430px);
+    transition-delay: 0s;
+}
+
+.log-box .form-box.register{
+    transform: translateX(430px);
+    transition: transform .5s ease;
+    transition-delay: 0s;
+
+}
+.log-box.active .form-box.register{
+    transform: translateX(0px);
+    transition-delay: .5s;
+}
+
+
+
+
+@supports (backdrop-filter: none){  /* to avoid error of back drop error */
+    .log-box .form-box{
+        backdrop-filter: blur(20px); 
+    }
+}
+.log-box .form-box h2{
+    font-size: 32px;
+    text-align: center;
+}
+.log-box .form-box .input-box{
+    width: 340px;
+    position: relative;
+    height: 50px;
+    margin: 30px 0;
+    border-bottom: 2px solid #e4e4e4;
+}
+.log-box .form-box .input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    padding-right: 30px;
+}
+.log-box .form-box .input-box input:focus, 
+.log-box .form-box .input-box input:valid{ 
+    background: transparent;
+}
+.log-box .form-box .input-box label{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    /* transform: translateY(-50%); */
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s ease;
+
+                                             /* in this on next css input class should be same  otherwise transition does not work*/
+}
+.log-box .form-box .input-box input:focus~label,
+.log-box .form-box .input-box input:valid~label{
+    /* background: transparent; */
+    top:-5px;
+}
+
+.log-box .form-box .input-box .icon{
+    position: absolute;
+    right: 0;
+    font-size: 19px;
+    top: 13px;
+}
+
+.rember-forget{
+    font-size: 14.5px;
+    font-weight: 500;
+    margin: -15px 0 15px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rember-forget label input{
+    accent-color: #e4e4e4;
+    margin-right:3px ;
+}
+.rember-forget a{
+    color: #e4e4e4;
+    text-decoration: none;
+}
+.rember-forget a:hover{
+    text-decoration: underline;
+}
+.btn{
+    width: 100%;
+    height: 45px;
+    background: #c4103d;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #e4e4e4;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+}
+
+.form-box .login-register{
+    font-size: 14.5px;
+    font-weight: 500;
+    /* align-items: center; */
+    text-align: center;
+    margin-top: 25px;
+}
+.form-box .login-register p a{
+    color: #e4e4e4;
+    font-weight: 600;
+    text-decoration: none;
+}
+.login-register p a:hover{
+    text-decoration: underline;
+}
